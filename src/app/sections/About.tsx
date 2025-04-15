@@ -145,7 +145,7 @@ const About = () => {
             className="w-full md:w-1/2 space-y-6"
           >
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
-              I'm a passionate developer with expertise in multiple domains
+              I&apos;m a passionate developer with expertise in multiple domains
             </h3>
             
             <p className="text-gray-600 dark:text-gray-400">

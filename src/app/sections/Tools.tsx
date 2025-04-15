@@ -10,10 +10,8 @@ import {
   FaHtml5, 
   FaCss3Alt, 
   FaJs, 
-  FaDatabase, 
   FaWordpress, 
   FaBootstrap,
-  FaServer,
   FaChartBar,
   FaCode
 } from "react-icons/fa";

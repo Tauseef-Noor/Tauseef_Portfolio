@@ -33,7 +33,7 @@ const Hero = () => {
           className="w-full md:w-1/2 space-y-6 text-center md:text-left mb-10 md:mb-0"
         >
           <h2 className="text-xl md:text-2xl font-medium text-blue-600 dark:text-blue-500">
-            Hello, I'm
+            Hello, I&apos;m
           </h2>
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white">
             Tauseef Noor
@@ -43,7 +43,7 @@ const Hero = () => {
             <span className="animate-blink">|</span>
           </h3>
           <p className="text-gray-600 dark:text-gray-400 text-lg max-w-xl">
-            I build exceptional digital experiences that combine beautiful design with cutting-edge technology. Let's bring your ideas to life!
+            I build exceptional digital experiences that combine beautiful design with cutting-edge technology. Let&apos;s bring your ideas to life!
           </p>
           
           <div className="flex space-x-4 justify-center md:justify-start">
