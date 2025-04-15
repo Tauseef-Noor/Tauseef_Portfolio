@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --accent: #8b5cf6;
+  --text: #171717;
+  --text-secondary: #4b5563;
+  --border: #e5e7eb;
+  --card: #f9fafb;
+  --card-foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --primary: #3b82f6;
+    --secondary: #10b981;
+    --accent: #8b5cf6;
+    --text: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border: #1e293b;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans, sans-serif);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+  
+  .card {
+    @apply bg-[var(--card)] p-6 rounded-xl shadow-lg;
+  }
+}
