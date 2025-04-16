@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCode, FaLaptopCode, FaGraduationCap, FaSchool, FaUniversity } from "react-icons/fa";
-import { FaDatabase, FaBrain, FaReact, FaNodeJs, FaPython, FaWordpress, FaServer, FaMobile } from "react-icons/fa";
-import { SiTensorflow, SiJavascript, SiCss3, SiHtml5, SiMongodb } from "react-icons/si";
+import { FaDatabase, FaBrain, FaReact, FaPython } from "react-icons/fa";
+import { SiTensorflow, SiJavascript, SiCss3, SiHtml5 } from "react-icons/si";
 
 const About = () => {
   const controls = useAnimation();
