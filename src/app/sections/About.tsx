@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaCode, FaLaptopCode, FaGraduationCap, FaSchool, FaUniversity } from "react-icons/fa";
+import { FaDatabase, FaBrain, FaReact, FaNodeJs, FaPython, FaWordpress, FaServer, FaMobile } from "react-icons/fa";
+import { SiTensorflow, SiJavascript, SiCss3, SiHtml5, SiMongodb } from "react-icons/si";
 
 const About = () => {
   const controls = useAnimation();
@@ -93,7 +94,7 @@ const About = () => {
             variants={itemVariants} 
             className="w-full md:w-1/2 relative"
           >
-            <div className="relative w-full h-[450px] md:h-[500px]">
+            <div className="relative w-full h-[450px] md:h-[500px] bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 rounded-xl overflow-hidden flex items-center justify-center">
               {/* Animated dotted border */}
               <motion.div 
                 className="absolute inset-0 rounded-xl border-4 border-dashed border-purple-500/50"
@@ -107,15 +108,109 @@ const About = () => {
                 }}
               />
               
-              {/* Inner image container with slight padding for the border */}
-              <div className="absolute inset-1 rounded-xl overflow-hidden">
-                <Image 
-                  src="/images/about.png?v=3" 
-                  alt="Tauseef Noor working" 
-                  fill
-                  style={{ objectFit: "contain" }}
-                  className="drop-shadow-2xl"
-                />
+              {/* Tech Icons Container */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Central Code Icon */}
+                <motion.div
+                  className="absolute z-10 text-blue-600 dark:text-blue-400"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.8, 1, 0.8]
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <FaCode size={80} />
+                </motion.div>
+                
+                {/* Orbiting Web Icons */}
+                <motion.div
+                  className="absolute w-[300px] h-[300px]"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                >
+                  {/* React */}
+                  <motion.div 
+                    className="absolute text-blue-500"
+                    style={{ top: '0%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaReact size={40} />
+                  </motion.div>
+                  
+                  {/* JavaScript */}
+                  <motion.div 
+                    className="absolute text-yellow-500"
+                    style={{ top: '50%', right: '0%', transform: 'translate(50%, -50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <SiJavascript size={40} />
+                  </motion.div>
+                  
+                  {/* HTML */}
+                  <motion.div 
+                    className="absolute text-orange-500"
+                    style={{ bottom: '0%', left: '50%', transform: 'translate(-50%, 50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <SiHtml5 size={40} />
+                  </motion.div>
+                  
+                  {/* CSS */}
+                  <motion.div 
+                    className="absolute text-blue-600"
+                    style={{ top: '50%', left: '0%', transform: 'translate(-50%, -50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <SiCss3 size={40} />
+                  </motion.div>
+                </motion.div>
+                
+                {/* Orbiting ML/Data Icons */}
+                <motion.div
+                  className="absolute w-[400px] h-[400px]"
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                >
+                  {/* TensorFlow */}
+                  <motion.div 
+                    className="absolute text-orange-600"
+                    style={{ top: '15%', right: '15%', transform: 'translate(50%, -50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <SiTensorflow size={35} />
+                  </motion.div>
+                  
+                  {/* Python */}
+                  <motion.div 
+                    className="absolute text-green-500"
+                    style={{ bottom: '15%', right: '15%', transform: 'translate(50%, 50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaPython size={35} />
+                  </motion.div>
+                  
+                  {/* Database */}
+                  <motion.div 
+                    className="absolute text-purple-500"
+                    style={{ bottom: '15%', left: '15%', transform: 'translate(-50%, 50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaDatabase size={35} />
+                  </motion.div>
+                  
+                  {/* AI Brain */}
+                  <motion.div 
+                    className="absolute text-pink-500"
+                    style={{ top: '15%', left: '15%', transform: 'translate(-50%, -50%)' }}
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaBrain size={35} />
+                  </motion.div>
+                </motion.div>
               </div>
               
               {/* Decorative elements */}
